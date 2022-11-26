@@ -1,0 +1,36 @@
+Langkah-langkah:
+1. Install Laravel Baru
+- composer create-project laravel/laravel example-app
+- buat database baru, tambahkan pada .env
+- php artisan migrate
+2. Set Github
+- buat repo baru di github
+- Initialize repo, stagging semua code, lalu ketik feat: init commit
+- add remote, origin -> link github 
+- Push
+3. Git Flow
+- create new branch -> development
+- git flow init
+- 
+4. Install Laravel Breeze Auth
+- Install boilerplate pada feature baru
+- git flow feature start boilerplate
+- composer require laravel/breeze
+- php artisan breeze:install
+- php artisan breeze:install react
+- npm install
+- npm run dev
+- npm run build untuk production
+5. Install Spatie
+- composer require spatie/laravel-permission
+- Spatie\Permission\PermissionServiceProvider::class,
+- php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+- php artisan optimize:clear
+- php artisan migrate
+- php artisan make:seeder RoleTableSeeder
+- php artisan db:seed
+- php artisan make:seeder UserTableSeeder
+- Ubah class dan tambahkan pada DB seed
+- php artisan migrate:fresh --seed
+6. Setting Spatie
+- Kernel.php
